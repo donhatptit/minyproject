@@ -1,18 +1,19 @@
   <!-- start banner -->
-  <?php  
-  $id = isset($_GET["id"]) ? $_GET["id"]:0;
-  $subject = $this->model->get_a_record("select * from tbl_subject where subject_id = $id");
-  $class = $this->model->get_a_record("select * from tbl_class where class_id = $id");
-  ?>
-  <?php
 
-  $post_detail = $this->model->get_a_record("select * from tbl_post where post_id=$id ");
+  <?php
+$id = isset($_GET["id"]) ? $_GET["id"]:0;
+
+  $post_detail = $this->model->get_a_record("select * from tbl_post where post_id='$id' ");
+  $sub = $post_detail->subject_id;
+  $subject = $this->model->get_a_record("select * from tbl_subject where subject_id = $sub");
+  $cla = $subject->class_id;
+    $class = $this->model->get_a_record("select * from tbl_class where class_id = $cla");
   ?>
   <div id="banner" style="width: 100%;">
   	<div class="banner_container">
   		<ul class="breadcrumb">
   			<li><a href="index.php">Trang chủ</a></li>
-  			<li><a href=""> <?php echo $class->class; ?></a></li>
+  			<li><a href="index.php?controller=subject&id=<?php echo $class->class_id; ?>"><?php echo $class->class; ?></a></li>
   			<li><a href="index.php?controller=subject&id=<?php echo $subject->subject_id; ?>"><?php echo $subject->name_subject; ?></a></li>
   			<li><?php echo $post_detail->name; ?></li>
   		</ul>
@@ -106,9 +107,9 @@
   				foreach ($card_post as $rows): 
   					?>
   					<div class="post-content">
-  						<a href="#">
+  						<a href="index.php?controller=detail&id=<?php echo $rows->post_id; ?>">
   							<div class="card-post">
-  								<div class="title-post"><a href=""><?php echo $rows->name; ?> </a></div>
+  								<div class="title-post"><?php echo $rows->name; ?></div>
   								<div class="text-author">
   									<div class="author">
   										<?php echo $rows->athour; ?>

@@ -86,7 +86,7 @@
 				<?php
 					include "controller/frontend/controller_lastest.php";
 				?>
-					<?php include "controller/frontend/controller_class.php"; ?>
+					<?php include "controller/frontend/controller_classhome.php"; ?>
 				</div>
 
 

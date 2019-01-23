@@ -3,11 +3,10 @@ for(i = 0; i<post_news.length; i++){
     post_news[i].children[post_news[i].children.length-1].style.opacity=0.5;
 }
 
-// var viewMore = document.getElementsByClassName("read_more");
+
 var post = document.getElementsByClassName('post-content');
 var showPost = document.getElementsByClassName('text_post');
 
-console.log(showPost);
 var hiddenSubject = document.querySelectorAll('.subject');
 var loading = document.getElementsByClassName('loading')[0];
 var page_lik = document.getElementsByClassName('page_link')[0];
@@ -23,8 +22,7 @@ array.forEach(function(el){
     sub = document.getElementsByClassName('subject'),
     ld = document.getElementsByClassName('loading'),
     pg = document.getElementsByClassName('page_link');
-    console.log(viewMore);
-    // var post = document.getElementsByClassName('post-content');
+   
     var showPost = el.querySelector('.text_post');
 
     viewMore.onclick = function(){

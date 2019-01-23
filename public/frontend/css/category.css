@@ -124,9 +124,7 @@ margin: 10px 0;
 	box-shadow: 0 0 5px 0.5px #ff9900;
 	cursor: pointer;
 }
-/*.post_content:hover .post a{
-	color: #ff9900;
-}*/
+
 .read_more{
 	width: 90px;
 	text-align: center;

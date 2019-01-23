@@ -1,6 +1,9 @@
 var post_news = document.getElementsByClassName("post_news");
+var post_content = document.getElementsByName("post_content");
 for(i = 0; i<post_news.length; i++){
+
     post_news[i].children[post_news[i].children.length-1].style.opacity=0.5;
+
 }
 
 

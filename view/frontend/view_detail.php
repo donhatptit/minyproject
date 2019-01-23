@@ -13,7 +13,7 @@ $id = isset($_GET["id"]) ? $_GET["id"]:0;
   	<div class="banner_container">
   		<ul class="breadcrumb">
   			<li><a href="index.php">Trang chủ</a></li>
-  			<li><a href="index.php?controller=subject&id=<?php echo $class->class_id; ?>"><?php echo $class->class; ?></a></li>
+  			<li><a href="index.php?controller=category&id=<?php echo $class->class_id; ?>"><?php echo $class->class; ?></a></li>
   			<li><a href="index.php?controller=subject&id=<?php echo $subject->subject_id; ?>"><?php echo $subject->name_subject; ?></a></li>
   			<li><?php echo $post_detail->name; ?></li>
   		</ul>

@@ -1,10 +1,10 @@
 <?php
-	class controler_subject{
+	class Controller_subject{
 		public $model;
 		public function __construct(){
-			$this->model = new model();
+			$this->model = new model;
 			include "view/frontend/view_subject.php";
 		}
 	}
-	new controler_subject();
+	new controller_subject();
 ?>

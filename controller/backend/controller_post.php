@@ -5,7 +5,7 @@ class controller_post{
 		$this->model = new model();
 		// phân trang
 			$record_per_page = 4;
-			$total = $this->model->num_rows("select class_id from tbl_class");
+			$total = $this->model->num_rows("select post_id from tbl_post");
 			$num_page = ceil($total/$record_per_page);
 			$p = isset($_GET["p"])&&$_GET["p"]>0 ? ($_GET["p"]-1) : 0;
 			$from = $p * $record_per_page;

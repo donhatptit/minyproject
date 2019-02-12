@@ -12,7 +12,14 @@
 						<h2>Quản Lý Môn Học</h2>
 					</div>
 					<div class="col-md-6 text-right">
-					<a href="admin.php?controller=add_edit_subject&act=add" class="btn btn-primary">Thêm</a>
+					<div class="row">
+									<div class="col-md-8 tim_kiem">
+										<input type="text" name="" class="timkiem form-control" placeholder="Tìm kiếm ...">
+									</div>
+									<div class="col-md-4">
+										<a href="admin.php?controller=add_edit_subject&act=add" class="btn btn-primary">Thêm</a>
+									</div>
+								</div>
 					</div>
 				</div>
 			</div>
@@ -20,12 +27,14 @@
 				<div class="card-body">
 				<!-- table -->
 				<table class="table table-hover table-bordered">
+					<thead>
 					<tr>
 						<th style="width: 250px; text-align: center;">Tên Môn Học</th>
 						
 						<th style="width: 150px;text-align: center;">Hành Động</th>
 					</tr>
-					
+				</thead>
+					<tbody class="danhsach">
 					<?php
 						foreach ($arr as $rows): 
 					?>
@@ -39,6 +48,7 @@
 						</td>
 					</tr>
 				<?php endforeach; ?>
+			</tbody>
 				</table>
 				<!-- end table -->
 				</div>
@@ -55,3 +65,4 @@
 		<!-- end card -->
 	</div>
 	</div>
+	<script type="text/javascript" src="public/backend/js/sub.js"></script>

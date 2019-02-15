@@ -45,6 +45,18 @@
 						</div>
 					</div>
 					<!-- end form group -->
+					<!-- form group -->
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-2 text-right">Chọn quyền</div>
+							<div class="col-md-10">
+							<input type="checkbox" <?php if(isset($record->level)&&$record->level == 1): ?> checked <?php endif; ?> name="level" >&nbsp;<label>Quản Lý Bài Viết</label>
+
+						</div>
+							</div>
+						</div>
+					</div>
+					<!-- end form group -->
 
 					<!-- form group -->
 					<div class="form-group">
@@ -56,6 +68,7 @@
 						</div>
 					</div>
 					<!-- end form group -->
+
 					
 				</form>
 			</div>
